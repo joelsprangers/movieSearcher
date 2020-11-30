@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_blank_reset.css">
+    <script defer src="moviedatabase.js"></script>
+    <script defer src="script.js"></script>
+    <title>Movie Searcher</title>
+</head>
+
+<body class="page">
+
+    <head class="page-title">
+        <h1>Welkom bij de Winc Movie Searcher</h1>
+    </head>
+
+    <nav class="page-movie-filter">
+
+        <input type="radio" name="filter" id="movies-latest" value="movies-latest">
+        <label for="movies-latest"> De laatste films, 2014 of nieuwer</label>
+
+        <input type="radio" name="filter" id="movies-avengers" value="movies-avengers">
+        <label for="movies-avengers">Avenger films</label>
+
+        <input type="radio" name="filter" id="movies-x-men" value="movies-x-men">
+        <label for="movies-x-men">X-men films</label>
+
+        <input type="radio" name="filter" id="movies-princess" value="movies-princess">
+        <label for="movies-princess">Princess films</label>
+
+        <input type="radio" name="filter" id="movies-batman" value="movies-batman">
+        <label for="movies-batman">Batman Films</label>
+
+        <input type="text" name="text-filter" id="movie-by-title">
+        <label for="movie-by-title">of zoek op titel</label>
+
+    </nav>
+
+    <main class="page-movies">
+        <ul class="movie-list movie__gridbox">
+            <li class="movie-item">
+                <img class="movie__display" src="#" alt="movie-name">
+                <a class="movie-redirect" href="#imdb-id" target="_blank" rel="noopener noreferrer"></a>
+            </li>
+        </ul>
+    </main>
+
+</body>
+
+</html>

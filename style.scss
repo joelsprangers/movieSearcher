@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+$header-color: #b7c8e2;
+$footer-color: #9cabc4;
+$page-color: #c3cfe2;
+$text-color: black;
+$padding: 20px;
+
+@mixin textDesign {
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+    color: $text-color;
+}
+
+@mixin flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.page{
+    font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    background-color: $page-color;
+}
