@@ -3,15 +3,14 @@
 
 $header-color: #b7c8e2;
 $footer-color: #9cabc4;
-$page-color: #c3cfe2;
-$text-color: black;
+$page-color: rgb(21, 39, 39);
+$text-color: rgb(180, 178, 178);
 $padding: 20px;
 
 @mixin textDesign {
-    padding: 10px;
-    letter-spacing: 2px;
-    font-size: 1.1em;
+    letter-spacing: 0.5px;
     color: $text-color;
+    font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @mixin flex-container {
@@ -23,7 +22,73 @@ $padding: 20px;
 }
 
 .page{
-    font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.1em;
+    background-color: $page-color;
+    @include textDesign();
+    @include flex-container();
+}
+
+.head--title {
+    background-color: $page-color;
+    width: 100%;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.page-movie-filter{
+    padding: 10px 0px 10px 0px;
+    background-color: $page-color;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+}
+.button-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 5px 0px 5px 10px;
+
+}
+
+.button-wrapper__radio-display{
+    margin-right: 20px;
+
+}
+
+.button-wrapper__text-display{
+    width: 200px;
+    height: 30px;
+    border-radius: 2px;
+    margin-right: 20px;
+    border: unset;
+    background-color:rgb(42, 78, 78);
+    @include textDesign();
+}
+.movie__gridbox{
+    height: auto;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(3, auto);
+    padding: 10px;
     background-color: $page-color;
 }
+
+.movie__display{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+

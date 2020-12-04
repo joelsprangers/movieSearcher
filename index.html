@@ -13,38 +13,41 @@
 
 <body class="page">
 
-    <head class="page-title">
-        <h1>Welkom bij de Winc Movie Searcher</h1>
+    <head class="head">
+        <h1 class="head--title">Welkom bij de Winc Movie Searcher</h1>
     </head>
 
     <nav class="page-movie-filter">
 
-        <input type="radio" name="filter" id="movies-latest" value="movies-latest">
-        <label for="movies-latest"> De laatste films, 2014 of nieuwer</label>
-
-        <input type="radio" name="filter" id="movies-avengers" value="movies-avengers">
-        <label for="movies-avengers">Avenger films</label>
-
-        <input type="radio" name="filter" id="movies-x-men" value="movies-x-men">
-        <label for="movies-x-men">X-men films</label>
-
-        <input type="radio" name="filter" id="movies-princess" value="movies-princess">
-        <label for="movies-princess">Princess films</label>
-
-        <input type="radio" name="filter" id="movies-batman" value="movies-batman">
-        <label for="movies-batman">Batman Films</label>
-
-        <input type="text" name="text-filter" id="movie-by-title">
-        <label for="movie-by-title">of zoek op titel</label>
+        <div class="button-wrapper">
+            <input class="button-wrapper__radio-display" type="radio" name="filter" id="movies-latest" value="movies-latest">
+            <label for="movies-latest"> De laatste films, 2014 of nieuwer</label>
+        </div>
+        <div class="button-wrapper">
+            <input class="button-wrapper__radio-display" type="radio" name="filter" id="movies-avengers" value="movies-avengers">
+            <label for="movies-avengers">Avenger films</label>
+        </div>
+        <div class="button-wrapper">
+            <input class="button-wrapper__radio-display" type="radio" name="filter" id="movies-x-men" value="movies-x-men">
+            <label for="movies-x-men">X-men films</label>
+        </div>
+        <div class="button-wrapper">
+            <input class="button-wrapper__radio-display" type="radio" name="filter" id="movies-princess" value="movies-princess">
+            <label for="movies-princess">Princess films</label>
+        </div>
+        <div class="button-wrapper">
+            <input class="button-wrapper__radio-display" type="radio" name="filter" id="movies-batman" value="movies-batman">
+            <label for="movies-batman">Batman Films</label>
+        </div>
+        <div class="button-wrapper">
+            <input class="button-wrapper__text-display" type="text" name="text-filter" id="movie-by-title">
+            <label for="movie-by-title">zoek</label>
+        </div>
 
     </nav>
 
     <main class="page-movies">
         <ul class="movie-list movie__gridbox">
-<!--             <li class="movie-item"> 
-                <img class="movie-image movie__display" src="#" alt="movie-name">
-                <a class="movie-redirect" href="#imdb-id" target="_blank" rel="noopener noreferrer"></a>
-            </li> -->
         </ul>
     </main>
 

@@ -1,7 +1,101 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 .page {
+  background-color: #152727;
+  letter-spacing: 0.5px;
+  color: #b4b2b2;
   font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.1em;
-  background-color: #c3cfe2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head--title {
+  background-color: #152727;
+  width: 100%;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.page-movie-filter {
+  padding: 10px 0px 10px 0px;
+  background-color: #152727;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.button-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  padding: 5px 0px 5px 10px;
+}
+
+.button-wrapper__radio-display {
+  margin-right: 20px;
+}
+
+.button-wrapper__text-display {
+  width: 200px;
+  height: 30px;
+  border-radius: 2px;
+  margin-right: 20px;
+  border: unset;
+  background-color: #2a4e4e;
+  letter-spacing: 0.5px;
+  color: #b4b2b2;
+  font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.movie__gridbox {
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  padding: 10px;
+  background-color: #152727;
+}
+
+.movie__display {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */

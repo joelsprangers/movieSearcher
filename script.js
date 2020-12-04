@@ -2,19 +2,20 @@
 
 //elements
 const radioButtons = document.querySelectorAll('input[name="filter"]');
+const manualInput = document.querySelector('input[name="text-filter"]');
 const movieList = document.querySelector(".movie-list");
 const movieItem = document.querySelector(".movie-item");
+
 const movieInput = movies;
 
 //filters
 const movieLatest = movieInput.filter(movie => parseInt(movie.Year) > 2013);
-const movieAvengers = movieInput.filter(movie => movie.Title.toLowerCase().includes("avengers"));
-const movieXmen = movieInput.filter(movie => movie.Title.toLowerCase().includes("x-men"));
-const moviePrincess = movieInput.filter(movie => movie.Title.toLowerCase().includes("princess"));
-const movieBatman = movieInput.filter(movie => movie.Title.toLowerCase().includes("batman"));
+const movieFilter = (movieName) => movieInput.filter(movie => movie.Title.toLowerCase().includes(movieName));
 
-//const movieIMG = document.querySelector(".movie-image");
-//const movieRedirect = document.querySelector(".movie-redirect");
+const movieAvengers = movieFilter("avengers");
+const movieXmen = movieFilter("x-men");
+const moviePrincess = movieFilter("princess");
+const movieBatman = movieFilter("batman");
 
 const addMoviesToDom = (movieInput) => movieInput.forEach(movie => {
     const addMovie = document.createElement("li");
@@ -22,7 +23,7 @@ const addMoviesToDom = (movieInput) => movieInput.forEach(movie => {
     const addA = document.createElement("a");
 
     //class tag
-    addMovie.classList.add("movie-item");
+    addMovie.classList.add("movie-item", "movie__gridbox");
 
     //img tags
     addImg.classList.add("movie-image", "movie__display");
@@ -35,24 +36,33 @@ const addMoviesToDom = (movieInput) => movieInput.forEach(movie => {
     addA.target = "_blank";
 
     addMovie.appendChild(addImg);
+    addA.appendChild(addImg);
     addMovie.appendChild(addA);
     movieList.appendChild(addMovie);
 })
 
+//remove all elements
 const removeAllMoviesFromDom = () => {
     while (movieList.firstChild) {
         movieList.removeChild(movieList.lastChild);
     }
 }
 
-console.log(movieList.firstElementChild);
-
-
-//hier komt de switch
+//switch
 addMoviesToDom(movieInput);
 
-console.log(movieList);
 
+//free search
+let textInput = manualInput.addEventListener('change', (e) => {
+
+    if (e.target.value != '') {
+        let movieManual = movieFilter(e.target.value);
+        removeAllMoviesFromDom();
+        addMoviesToDom(movieManual);
+    }
+})
+
+//switch
 const filterInput = radioButtons.forEach(button => {
     button.addEventListener("change", function (e) {
         let currentFilter = e.target.id;
